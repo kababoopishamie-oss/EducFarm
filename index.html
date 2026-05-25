@@ -20,6 +20,12 @@
     <link rel="apple-touch-icon" href="/EducFarm/icons/pwa-192.png" />
 
     <title>EducFarm</title>
+    <script>
+      (function(){
+        var p = new URLSearchParams(window.location.search).get('p');
+        if (p) window.history.replaceState(null, '', '/EducFarm' + p);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
